@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Reveal-on-scroll utility */
+.reveal-initial { opacity: 0; transform: translateY(12px); transition: opacity .6s ease, transform .6s ease; }
+.reveal-in { opacity: 1; transform: translateY(0); }
+
+/* Smooth scroll for anchor links */
+html { scroll-behavior: smooth; }
