@@ -1,7 +1,7 @@
 <template>
   <header :class="['fixed top-0 left-0 right-0 z-50 w-full border-b border-slate-200/70 backdrop-blur bg-white/80 transition-shadow', {'shadow-sm': scrolled}]">
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-      <a href="#hero" class="font-extrabold tracking-tight text-slate-900" @click.prevent="onLinkClick('#hero')">Marketing.pe</a>
+      <a href="#hero" class="font-extrabold tracking-tight text-slate-900" @click.prevent="onLinkClick('#hero')">Markting.pe</a>
       <nav aria-label="Principal" class="hidden md:flex items-center gap-6 text-sm font-medium text-slate-700">
         <a v-for="l in links" :key="l.href" :href="l.href" :class="navClass(l.href)" @click.prevent="onLinkClick(l.href)">{{ l.label }}</a>
       </nav>

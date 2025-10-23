@@ -1,4 +1,4 @@
-# web_Marketing.pe
+# web_Markting.pe
 
 Proyecto Nuxt 3 con Tailwind, Pinia, Swiper y Toastification.
 

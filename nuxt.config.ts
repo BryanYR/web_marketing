@@ -4,7 +4,7 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   app: {
     head: {
-      title: "Marketing.pe",
+      title: "Markting.pe",
     },
   },
   modules: [

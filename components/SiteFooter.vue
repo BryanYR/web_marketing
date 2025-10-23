@@ -3,7 +3,7 @@
     <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
       <div class="grid grid-cols-1 gap-8 sm:grid-cols-3">
         <div>
-          <div class="text-lg font-extrabold text-slate-900">Marketing.pe</div>
+          <div class="text-lg font-extrabold text-slate-900">Markting.pe</div>
           <p class="mt-2 text-sm text-slate-600">Agencia creativa. Estrategia, diseño y desarrollo.</p>
         </div>
         <div>
@@ -25,7 +25,7 @@
         </div>
       </div>
       <div class="mt-10 flex flex-col items-center justify-between gap-4 border-t border-slate-200 pt-6 text-xs text-slate-500 sm:flex-row">
-        <p>© {{ new Date().getFullYear() }} Marketing.pe. Todos los derechos reservados.</p>
+        <p>© {{ new Date().getFullYear() }} Markting.pe. Todos los derechos reservados.</p>
       </div>
     </div>
   </footer>

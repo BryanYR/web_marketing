@@ -1,5 +1,5 @@
 {
-  "name": "web_Marketing.pe",
+  "name": "web_Markting.pe",
   "type": "module",
   "private": true,
   "scripts": {
@@ -15,6 +15,7 @@
     "nuxt": "^3.14.159",
     "pinia": "^2.2.6",
     "swiper": "^12.0.2",
+    "tailwind-variants": "0.2.1",
     "vue": "^3.5.22",
     "vue-router": "^4.5.1",
     "vue-toastification": "^2.0.0-rc.5"

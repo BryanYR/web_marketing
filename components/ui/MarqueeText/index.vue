@@ -1,25 +1,12 @@
 <template>
-  <div
-    class="pointer-events-none absolute inset-0 overflow-hidden"
-    aria-hidden="true"
-  >
-  <div class="absolute left-0 right-0" :class="yClass">
+  <div :class="rootClass" aria-hidden="true">
+    <div :class="railClass" :style="{}" :data-y="yClass">
       <div class="relative w-[200%]">
-        <div
-          :style="trackStyle"
-          class="marquee-track flex w-[200%] items-center whitespace-nowrap will-change-transform"
-          :class="[opacityClass]"
-        >
-          <div
-            class="flex min-w-[100%] items-center gap-10"
-            :class="[sizeClass, weightClass, colorClass, trackingClass]"
-          >
+        <div :style="trackStyle" :class="trackClass">
+          <div :class="[lineClass, sizeClass, weightClass, colorClass, trackingClass]">
             <span v-for="(w, i) in line" :key="`a-${i}`">{{ w }}</span>
           </div>
-          <div
-            class="flex min-w-[100%] items-center gap-10"
-            :class="[sizeClass, weightClass, colorClass, trackingClass]"
-          >
+          <div :class="[lineClass, sizeClass, weightClass, colorClass, trackingClass]">
             <span v-for="(w, i) in line" :key="`b-${i}`">{{ w }}</span>
           </div>
         </div>
@@ -30,6 +17,7 @@
 
 <script setup lang="ts">
 import { computed } from 'vue'
+import { marqueeRoot, marqueeRail, marqueeTrack, marqueeLine } from './MarqueeText.style'
 const props = withDefaults(
   defineProps<{
     words: string[]
@@ -69,6 +57,11 @@ const trackStyle = computed(
       '--marquee-duration': `${props.durationMs}ms`,
     } as Record<string, string>)
 )
+
+const rootClass = computed(() => marqueeRoot())
+const railClass = computed(() => [marqueeRail(), props.yClass].filter(Boolean).join(' '))
+const trackClass = computed(() => [marqueeTrack(), props.opacityClass].filter(Boolean).join(' '))
+const lineClass = computed(() => marqueeLine())
 </script>
 
 <style scoped>

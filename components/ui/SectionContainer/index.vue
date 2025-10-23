@@ -9,6 +9,7 @@
 
 <script setup lang="ts">
 import { computed } from 'vue'
+import { sectionContainerStyles } from './SectionContainer.style'
 const props = defineProps<{
   id?: string
   padding?: 'none' | 'sm' | 'md' | 'lg'
@@ -17,16 +18,5 @@ const props = defineProps<{
   contentClass?: string
 }>()
 
-const paddingMap = {
-  none: 'py-0',
-  sm: 'py-10 sm:py-12',
-  md: 'py-16 sm:py-20',
-  lg: 'py-24 sm:py-28',
-}
-
-const wrapperClass = computed(() => {
-  const p = paddingMap[props.padding ?? 'md']
-  const bg = props.bg ?? ''
-  return [p, bg, props.class].filter(Boolean).join(' ')
-})
+const wrapperClass = computed(() => sectionContainerStyles({ padding: props.padding, class: [props.bg, props.class].filter(Boolean).join(' ') }))
 </script>
