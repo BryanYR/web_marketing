@@ -12,7 +12,7 @@
           :autoplay="{ delay: 3500 }"
           :loop="true"
         >
-          <SwiperSlide v-for="(t, i) in testimonials" :key="i">
+          <SwiperSlide v-for="(t, i) in testimonials" :key="i" class="!h-full">
             <div class="h-full rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
               <p class="text-slate-700">“{{ t.quote }}”</p>
               <div class="mt-4 flex items-center gap-3">

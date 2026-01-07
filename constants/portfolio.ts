@@ -28,11 +28,21 @@ export const portfolio: PortfolioItem[] = [
     {
         title: 'Proyecto Stanza',
         description: 'Desarrollo de una plataforma educativa integral para instituciones académicas.',
-        image: '/images/stanza.webp',
+        image: '/images/stanza_1.png',
     },
     {
         title: 'Proyecto Tehno',
         description: 'Desarrollo de una plataforma educativa integral para instituciones académicas.',
         image: '/images/tehno.webp',
+    },
+    {
+        title: 'Proyecto Godesh',
+        description: 'Desarrollo de una plataforma educativa integral para instituciones académicas.',
+        image: '/images/godesh.png',
+    },
+    {
+        title: 'Proyecto PleopeOs',
+        description: 'Desarrollo de una plataforma educativa integral para instituciones académicas.',
+        image: '/images/peopleOs.png',
     }
 ]
